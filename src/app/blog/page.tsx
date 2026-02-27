@@ -3,7 +3,7 @@ import { getAllPosts } from "@/lib/blog";
 import { SITE_NAME } from "@/lib/constants";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { BlogSearch } from "@/components/BlogSearch";
-import { CTAOdontoConnect } from "@/components/CTAOdontoConnect";
+import { CTAPartner } from "@/components/CTAPartner";
 
 export const metadata: Metadata = {
   title: `Blog | ${SITE_NAME}`,
@@ -37,7 +37,7 @@ export default function BlogPage() {
       <BlogSearch posts={posts} />
 
       <section className="mt-12">
-        <CTAOdontoConnect />
+        <CTAPartner />
       </section>
     </div>
   );

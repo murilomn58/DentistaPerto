@@ -51,16 +51,18 @@ export function ProcedureCard({
   return (
     <Link
       href={href}
-      className="group block bg-white border border-gray-100 rounded-xl p-5 hover:border-blue-200 hover:shadow-md transition-all"
+      className="group block bg-white rounded-2xl p-6 card-hover gradient-border shadow-sm"
     >
-      <Icon className="h-8 w-8 text-blue-600 mb-3" />
-      <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">
+      <div className="icon-gradient w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+        <Icon className="h-6 w-6 text-blue-600" />
+      </div>
+      <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1.5">
         {procedure.nome}
       </h3>
-      <p className="text-sm text-gray-500 mb-3 line-clamp-2">
+      <p className="text-sm text-gray-500 mb-4 line-clamp-2">
         {procedure.descricao}
       </p>
-      <div className="text-sm font-medium text-blue-700">
+      <div className="inline-flex items-center gap-1 text-sm font-bold text-gradient">
         {min === 0
           ? `Até ${formatCurrency(max)}`
           : `${formatCurrency(min)} - ${formatCurrency(max)}`}

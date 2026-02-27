@@ -7,7 +7,7 @@ import { generateProcedureMetadata } from "@/lib/seo";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { FAQSection } from "@/components/FAQSection";
-import { CTAOdontoConnect } from "@/components/CTAOdontoConnect";
+import { CTAPartner } from "@/components/CTAPartner";
 import { AdSlot } from "@/components/AdSlot";
 import { UF_MAP } from "@/types";
 import { SSG_PROCEDURE_CITIES, SSG_TOP_PROCEDURES, SITE_URL } from "@/lib/constants";
@@ -187,7 +187,7 @@ export default async function ProcedureCityPage({
 
         {/* CTA */}
         <section className="mb-8">
-          <CTAOdontoConnect city={city.slug} procedure={procedure.slug} />
+          <CTAPartner city={city.slug} procedure={procedure.slug} />
         </section>
 
         <AdSlot position="in-content" />

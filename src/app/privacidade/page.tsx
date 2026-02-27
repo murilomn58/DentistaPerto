@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { CTAOdontoConnect } from "@/components/CTAOdontoConnect";
+import { CTAPartner } from "@/components/CTAPartner";
+import { PARTNER } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: `Política de Privacidade | ${SITE_NAME}`,
@@ -193,7 +194,7 @@ export default function PrivacidadePage() {
         <h2>9. Links Externos</h2>
         <p>
           O {SITE_NAME} pode conter links para sites de terceiros, incluindo o
-          OdontoConnect e outros parceiros. Esta Política de Privacidade
+          {PARTNER.name} e outros parceiros. Esta Política de Privacidade
           aplica-se exclusivamente ao {SITE_NAME}. Recomendamos que o usuário
           consulte as políticas de privacidade dos sites externos antes de
           fornecer qualquer dado pessoal.
@@ -228,7 +229,7 @@ export default function PrivacidadePage() {
       </div>
 
       <section className="mt-12">
-        <CTAOdontoConnect />
+        <CTAPartner />
       </section>
     </div>
   );

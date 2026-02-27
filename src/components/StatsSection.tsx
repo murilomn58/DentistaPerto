@@ -22,11 +22,17 @@ export function StatsSection({ stats }: { stats: Stat[] }) {
         return (
           <div
             key={stat.label}
-            className="bg-white border border-gray-100 rounded-xl p-5 text-center"
+            className="glass-card rounded-2xl p-6 text-center card-hover shadow-sm"
           >
-            <Icon className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-            <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+            <div className="icon-gradient-solid w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <Icon className="h-6 w-6 text-white" />
+            </div>
+            <div className="text-2xl md:text-3xl font-bold text-gradient">
+              {stat.value}
+            </div>
+            <div className="text-sm text-gray-500 mt-1 font-medium">
+              {stat.label}
+            </div>
           </div>
         );
       })}

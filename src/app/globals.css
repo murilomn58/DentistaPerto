@@ -10,3 +10,107 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
 }
+
+/* Premium gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-card-dark {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Shimmer animation for CTA */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-delayed {
+  animation: float-delayed 5s ease-in-out 1s infinite;
+}
+
+/* Pulse glow for CTA buttons */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(37, 99, 235, 0.5); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Premium card hover */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient border effect */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  border-radius: 9999px 9999px 0 0;
+}
+
+/* Icon gradient background */
+.icon-gradient {
+  background: linear-gradient(135deg, #eff6ff 0%, #ecfeff 100%);
+}
+
+.icon-gradient-solid {
+  background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+}

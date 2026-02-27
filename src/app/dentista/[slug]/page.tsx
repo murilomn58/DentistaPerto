@@ -17,7 +17,8 @@ import { CityStatsSection, StatsSection } from "@/components/StatsSection";
 import { ProcedureCard } from "@/components/ProcedureCard";
 import { CityCard } from "@/components/CityCard";
 import { FAQSection } from "@/components/FAQSection";
-import { CTAOdontoConnect } from "@/components/CTAOdontoConnect";
+import { CTAPartner } from "@/components/CTAPartner";
+import { PARTNER } from "@/lib/constants";
 import { AdSlot } from "@/components/AdSlot";
 import { UF_MAP } from "@/types";
 import { SITE_URL, SSG_CITY_COUNT } from "@/lib/constants";
@@ -144,7 +145,7 @@ function UFView({ uf }: { uf: string }) {
         </section>
 
         <section className="mb-12">
-          <CTAOdontoConnect city={uf.toLowerCase()} />
+          <CTAPartner city={uf.toLowerCase()} />
         </section>
 
         <section className="mb-12">
@@ -201,7 +202,7 @@ function CityView({ citySlug }: { citySlug: string }) {
     },
     {
       question: `Como encontrar um bom dentista em ${city.nome}?`,
-      answer: `Para encontrar um dentista de confiança em ${city.nome}, verifique o registro no CRO, busque avaliações de outros pacientes, confirme a especialidade desejada e agende uma consulta de avaliação. O OdontoConnect pode ajudar você a encontrar profissionais verificados.`,
+      answer: `Para encontrar um dentista de confiança em ${city.nome}, verifique o registro no CRO, busque avaliações de outros pacientes, confirme a especialidade desejada e agende uma consulta de avaliação. O ${PARTNER.name} pode ajudar você a encontrar profissionais verificados.`,
     },
     {
       question: `Quais especialidades odontológicas estão disponíveis em ${city.nome}?`,
@@ -248,7 +249,7 @@ function CityView({ citySlug }: { citySlug: string }) {
         </section>
 
         <section className="mb-12">
-          <CTAOdontoConnect city={city.slug} />
+          <CTAPartner city={city.slug} />
         </section>
 
         <section className="mb-12">

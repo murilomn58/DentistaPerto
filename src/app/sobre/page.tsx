@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { SITE_NAME, ODONTO_CONNECT_URL } from "@/lib/constants";
+import { SITE_NAME, PARTNER } from "@/lib/constants";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { getCityCount } from "@/lib/cities";
 import { getAllProcedures } from "@/lib/procedures";
@@ -54,7 +54,7 @@ export default function SobrePage() {
           <strong>IBGE</strong>, <strong>CFO (Conselho Federal de Odontologia)</strong>{" "}
           e pesquisas de mercado, oferecemos estimativas de preços regionalizadas,
           informações sobre especialidades e uma ponte direta com profissionais
-          verificados através do OdontoConnect.
+          verificados através de plataformas parceiras.
         </p>
       </section>
 
@@ -103,7 +103,7 @@ export default function SobrePage() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-1">Encontre profissionais</h3>
               <p className="text-sm text-gray-500">
-                Conecte-se com dentistas verificados através do OdontoConnect.
+                Conecte-se com dentistas verificados através de plataformas parceiras.
               </p>
             </div>
           </div>
@@ -159,15 +159,15 @@ export default function SobrePage() {
                 inteligente, usando tecnologia para transformar a odontologia no Brasil.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  href={ODONTO_CONNECT_URL}
+                <a
+                  href={PARTNER.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-[#13293D] px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-50 transition-colors"
                 >
-                  Conheça o OdontoConnect
+                  Conheça o {PARTNER.name}
                   <ExternalLink className="w-4 h-4" />
-                </Link>
+                </a>
                 <Link
                   href="/contato"
                   className="inline-flex items-center gap-2 border border-white/30 text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/10 transition-colors"

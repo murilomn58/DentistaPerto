@@ -81,7 +81,7 @@ export function SearchBar({
           onKeyDown={handleKeyDown}
           onFocus={() => results.length > 0 && setIsOpen(true)}
           placeholder={placeholder}
-          className="w-full pl-12 pr-10 py-3.5 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full pl-12 pr-10 py-4 bg-white/95 backdrop-blur-sm border border-white/30 rounded-2xl text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent shadow-xl shadow-blue-900/10 text-lg"
           role="combobox"
           aria-expanded={isOpen}
           aria-haspopup="listbox"
@@ -104,7 +104,7 @@ export function SearchBar({
       {isOpen && (
         <ul
           role="listbox"
-          className="absolute z-50 w-full mt-2 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden"
+          className="absolute z-50 w-full mt-2 bg-white/95 backdrop-blur-xl border border-gray-100 rounded-2xl shadow-2xl overflow-hidden"
         >
           {results.map((city, i) => (
             <li

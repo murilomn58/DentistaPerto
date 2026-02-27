@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { SITE_NAME } from "@/lib/constants";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { CTAOdontoConnect } from "@/components/CTAOdontoConnect";
+import { CTAPartner } from "@/components/CTAPartner";
 
 export const metadata: Metadata = {
   title: `Contato | ${SITE_NAME}`,
@@ -66,7 +66,7 @@ export default function ContatoPage() {
       </div>
 
       <section className="mt-12">
-        <CTAOdontoConnect />
+        <CTAPartner />
       </section>
     </div>
   );

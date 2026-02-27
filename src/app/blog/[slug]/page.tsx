@@ -6,7 +6,7 @@ import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import { generateArticleSchema } from "@/lib/seo";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { CTAOdontoConnect } from "@/components/CTAOdontoConnect";
+import { CTAPartner } from "@/components/CTAPartner";
 import { SITE_NAME } from "@/lib/constants";
 
 export async function generateStaticParams() {
@@ -153,7 +153,7 @@ export default async function BlogPostPage({
 
         {/* CTA */}
         <section className="mt-12">
-          <CTAOdontoConnect />
+          <CTAPartner />
         </section>
 
         <div className="mt-8">

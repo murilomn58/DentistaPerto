@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { CTAOdontoConnect } from "@/components/CTAOdontoConnect";
+import { CTAPartner } from "@/components/CTAPartner";
+import { PARTNER } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: `Termos de Uso | ${SITE_NAME}`,
@@ -135,7 +136,7 @@ export default function TermosPage() {
         <h2>7. Links para Terceiros</h2>
         <p>
           O {SITE_NAME} pode conter links para sites e plataformas de terceiros,
-          incluindo o OdontoConnect e outros parceiros. Esses links são
+          incluindo o {PARTNER.name} e outros parceiros. Esses links são
           disponibilizados para conveniência do usuário. Cada plataforma externa
           possui seus próprios termos de uso e políticas de privacidade, pelos
           quais o {SITE_NAME} não se responsabiliza.
@@ -176,7 +177,7 @@ export default function TermosPage() {
       </div>
 
       <section className="mt-12">
-        <CTAOdontoConnect />
+        <CTAPartner />
       </section>
     </div>
   );
