@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 import { SITE_NAME } from "@/lib/constants";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { CTAOdontoConnect } from "@/components/CTAOdontoConnect";
 
 export const metadata: Metadata = {
   title: `Contato | ${SITE_NAME}`,
@@ -27,24 +28,46 @@ export default function ContatoPage() {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid sm:grid-cols-3 gap-4">
         <div className="bg-white border border-gray-100 rounded-xl p-6">
           <Mail className="h-8 w-8 text-blue-600 mb-3" />
           <h2 className="font-semibold text-gray-900 mb-1">Email</h2>
           <a
-            href="mailto:contato@dentistaperto.com.br"
+            href="mailto:vertech2026@gmail.com"
             className="text-blue-600 hover:underline"
           >
-            contato@dentistaperto.com.br
+            vertech2026@gmail.com
+          </a>
+        </div>
+
+        <div className="bg-white border border-gray-100 rounded-xl p-6">
+          <Phone className="h-8 w-8 text-blue-600 mb-3" />
+          <h2 className="font-semibold text-gray-900 mb-1">Telefone</h2>
+          <a
+            href="tel:+5549999551051"
+            className="text-blue-600 hover:underline"
+          >
+            +55 (49) 99955-1051
           </a>
         </div>
 
         <div className="bg-white border border-gray-100 rounded-xl p-6">
           <MessageCircle className="h-8 w-8 text-green-600 mb-3" />
           <h2 className="font-semibold text-gray-900 mb-1">WhatsApp</h2>
-          <p className="text-gray-600 text-sm">Em breve</p>
+          <a
+            href="https://wa.me/5549999551051"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 hover:underline"
+          >
+            +55 (49) 99955-1051
+          </a>
         </div>
       </div>
+
+      <section className="mt-12">
+        <CTAOdontoConnect />
+      </section>
     </div>
   );
 }

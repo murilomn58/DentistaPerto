@@ -153,7 +153,7 @@ export default function SobrePage() {
               <h2 className="text-2xl font-bold mb-2">Um produto Vertech Soluções</h2>
               <p className="text-blue-100 leading-relaxed mb-4">
                 O {SITE_NAME} faz parte do ecossistema da{" "}
-                <strong className="text-white">Vertech Soluções</strong>, empresa de
+                <a href="https://sitevertech-production.up.railway.app/" target="_blank" rel="noopener noreferrer" className="text-white font-bold underline hover:text-blue-200 transition-colors">Vertech Soluções</a>, empresa de
                 tecnologia focada em soluções inovadoras para o setor de saúde.
                 Nosso objetivo é conectar pacientes, dentistas e protéticos de forma
                 inteligente, usando tecnologia para transformar a odontologia no Brasil.
@@ -187,10 +187,10 @@ export default function SobrePage() {
           Tem sugestões, dúvidas ou quer saber mais sobre nossos produtos?
           Entre em contato pelo email{" "}
           <a
-            href="mailto:contato@dentistaperto.com.br"
+            href="mailto:vertech2026@gmail.com"
             className="text-blue-600 hover:underline"
           >
-            contato@dentistaperto.com.br
+            vertech2026@gmail.com
           </a>{" "}
           ou visite nossa{" "}
           <Link href="/contato" className="text-blue-600 hover:underline">

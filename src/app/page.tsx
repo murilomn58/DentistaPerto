@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import { SearchBar } from "@/components/SearchBar";
 import { BrazilMap } from "@/components/BrazilMap";
 import { ProcedureCard } from "@/components/ProcedureCard";
@@ -8,6 +9,7 @@ import { getTopCities, getAllCities, getCityCount, getTotalPopulation } from "@/
 import { getTopProcedures } from "@/lib/procedures";
 import { getTotalDentists } from "@/lib/cfo-stats";
 import { formatNumber } from "@/lib/utils";
+import { getOdontoConnectURL } from "@/lib/constants";
 
 export default function Home() {
   const topCities = getTopCities(12);
@@ -32,8 +34,22 @@ export default function Home() {
             Compare preços, especialidades e encontre o dentista ideal em mais de{" "}
             {formatNumber(getCityCount())} cidades do Brasil.
           </p>
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <SearchBar cities={searchCities} />
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href={getOdontoConnectURL()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Encontrar dentistas avaliados
+              <ExternalLink className="h-4 w-4" />
+            </a>
+            <span className="text-sm text-gray-400">
+              Agende pelo OdontoConnect
+            </span>
           </div>
         </div>
       </section>
