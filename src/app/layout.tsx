@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
+      <body className={`${geistSans.variable} font-sans antialiased`}>
         {GA_ID && (
           <>
             <script
@@ -49,8 +49,6 @@ export default function RootLayout({
             />
           </>
         )}
-      </head>
-      <body className={`${geistSans.variable} font-sans antialiased`}>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
