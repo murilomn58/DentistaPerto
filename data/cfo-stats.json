@@ -1,0 +1,33 @@
+{
+  "fonte": "Conselho Federal de Odontologia (CFO) - 2024",
+  "total_brasil": 380000,
+  "estados": {
+    "AC": { "total": 1200, "populacao": 906876, "proporcao": 1.32 },
+    "AL": { "total": 4800, "populacao": 3365351, "proporcao": 1.43 },
+    "AM": { "total": 5200, "populacao": 4269995, "proporcao": 1.22 },
+    "AP": { "total": 1100, "populacao": 877613, "proporcao": 1.25 },
+    "BA": { "total": 19500, "populacao": 14985284, "proporcao": 1.30 },
+    "CE": { "total": 13200, "populacao": 9240580, "proporcao": 1.43 },
+    "DF": { "total": 12500, "populacao": 2996899, "proporcao": 4.17 },
+    "ES": { "total": 9800, "populacao": 4108508, "proporcao": 2.38 },
+    "GO": { "total": 14200, "populacao": 7206589, "proporcao": 1.97 },
+    "MA": { "total": 5800, "populacao": 7153262, "proporcao": 0.81 },
+    "MG": { "total": 42000, "populacao": 21322691, "proporcao": 1.97 },
+    "MS": { "total": 5600, "populacao": 2862821, "proporcao": 1.96 },
+    "MT": { "total": 6200, "populacao": 3567234, "proporcao": 1.74 },
+    "PA": { "total": 7800, "populacao": 8777124, "proporcao": 0.89 },
+    "PB": { "total": 6200, "populacao": 4059905, "proporcao": 1.53 },
+    "PE": { "total": 13500, "populacao": 9674793, "proporcao": 1.39 },
+    "PI": { "total": 4100, "populacao": 3289290, "proporcao": 1.25 },
+    "PR": { "total": 22500, "populacao": 11597484, "proporcao": 1.94 },
+    "RJ": { "total": 38000, "populacao": 17503832, "proporcao": 2.17 },
+    "RN": { "total": 5400, "populacao": 3560903, "proporcao": 1.52 },
+    "RO": { "total": 2800, "populacao": 1815278, "proporcao": 1.54 },
+    "RR": { "total": 900, "populacao": 652713, "proporcao": 1.38 },
+    "RS": { "total": 22000, "populacao": 11466630, "proporcao": 1.92 },
+    "SC": { "total": 14500, "populacao": 7338473, "proporcao": 1.98 },
+    "SE": { "total": 3200, "populacao": 2338474, "proporcao": 1.37 },
+    "SP": { "total": 85000, "populacao": 46289333, "proporcao": 1.84 },
+    "TO": { "total": 2600, "populacao": 1590248, "proporcao": 1.63 }
+  }
+}

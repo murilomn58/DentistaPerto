@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "nome": "Ortodontia",
+    "slug": "ortodontia",
+    "descricao": "Especialidade que corrige a posicao dos dentes e ossos maxilares, melhorando a estetica e funcao da mordida.",
+    "procedimentos_relacionados": ["aparelho-ortodontico"]
+  },
+  {
+    "id": 2,
+    "nome": "Implantodontia",
+    "slug": "implantodontia",
+    "descricao": "Especialidade focada na reabilitacao oral com implantes dentarios de titanio para substituir dentes perdidos.",
+    "procedimentos_relacionados": ["implante-dentario", "protese-protocolo"]
+  },
+  {
+    "id": 3,
+    "nome": "Endodontia",
+    "slug": "endodontia",
+    "descricao": "Tratamento dos canais radiculares e polpa dental, especialmente em casos de infeccao e dor intensa.",
+    "procedimentos_relacionados": ["canal-dentario"]
+  },
+  {
+    "id": 4,
+    "nome": "Periodontia",
+    "slug": "periodontia",
+    "descricao": "Tratamento das doencas da gengiva e tecidos de suporte dos dentes, como gengivite e periodontite.",
+    "procedimentos_relacionados": ["tratamento-de-gengiva", "gengivoplastia"]
+  },
+  {
+    "id": 5,
+    "nome": "Protese Dentaria",
+    "slug": "protese-dentaria-especialidade",
+    "descricao": "Reabilitacao oral com proteses fixas, removiveis e sobre implantes para repor dentes ausentes.",
+    "procedimentos_relacionados": ["protese-dentaria", "coroa-dentaria", "protese-protocolo"]
+  },
+  {
+    "id": 6,
+    "nome": "Odontopediatria",
+    "slug": "odontopediatria-especialidade",
+    "descricao": "Atendimento odontologico especializado para criancas, com abordagem ludica e preventiva.",
+    "procedimentos_relacionados": ["odontopediatria", "aplicacao-de-fluor", "selante-dental"]
+  },
+  {
+    "id": 7,
+    "nome": "Cirurgia Bucomaxilofacial",
+    "slug": "cirurgia-bucomaxilofacial",
+    "descricao": "Procedimentos cirurgicos na face, maxilares e boca, incluindo extracoes complexas e cirurgias ortognaticas.",
+    "procedimentos_relacionados": ["extracao-de-siso"]
+  },
+  {
+    "id": 8,
+    "nome": "Dentistica",
+    "slug": "dentistica",
+    "descricao": "Restauracoes esteticas e funcionais dos dentes, incluindo resinas compostas e clareamento dental.",
+    "procedimentos_relacionados": ["restauracao-dental", "clareamento-dental", "lente-de-contato-dental"]
+  },
+  {
+    "id": 9,
+    "nome": "Radiologia Odontologica",
+    "slug": "radiologia-odontologica",
+    "descricao": "Exames de imagem especializados para diagnostico odontologico, incluindo panoramicas e tomografias.",
+    "procedimentos_relacionados": ["radiografia-dental"]
+  },
+  {
+    "id": 10,
+    "nome": "Harmonizacao Orofacial",
+    "slug": "harmonizacao-orofacial-especialidade",
+    "descricao": "Procedimentos esteticos faciais realizados por dentistas habilitados, como botox, preenchimentos e bichectomia.",
+    "procedimentos_relacionados": ["harmonizacao-orofacial"]
+  }
+]
