@@ -20,8 +20,8 @@ export function Footer() {
               <span className="text-lg font-bold">{SITE_NAME}</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Encontre dentistas perto de voce em mais de 5.000 cidades do
-              Brasil. Compare precos e especialidades.
+              Encontre dentistas perto de você em mais de 5.000 cidades do
+              Brasil. Compare preços e especialidades.
             </p>
           </div>
 

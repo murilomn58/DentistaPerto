@@ -8,7 +8,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: `Blog | ${SITE_NAME}`,
   description:
-    "Dicas de saude bucal, precos de procedimentos e como encontrar o dentista ideal. Blog do DentistaPerto.",
+    "Dicas de saúde bucal, preços de procedimentos e como encontrar o dentista ideal. Blog do DentistaPerto.",
 };
 
 export default function BlogPage() {
@@ -18,14 +18,14 @@ export default function BlogPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: "Inicio", href: "/" },
+          { label: "Início", href: "/" },
           { label: "Blog", href: "/blog" },
         ]}
       />
 
       <h1 className="text-3xl font-bold text-gray-900 mt-6 mb-2">Blog</h1>
       <p className="text-lg text-gray-600 mb-8">
-        Dicas de saude bucal, precos e guias para cuidar do seu sorriso.
+        Dicas de saúde bucal, preços e guias para cuidar do seu sorriso.
       </p>
 
       <div className="space-y-6">

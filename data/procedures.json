@@ -3,19 +3,29 @@
     "id": 1,
     "nome": "Clareamento Dental",
     "slug": "clareamento-dental",
-    "descricao": "Procedimento estetico para branquear os dentes e remover manchas, devolvendo o brilho natural do sorriso.",
+    "descricao": "Procedimento estético para branquear os dentes e remover manchas, devolvendo o brilho natural do sorriso.",
     "preco_min": 500,
     "preco_max": 2500,
-    "keywords": ["clareamento dental", "branqueamento dental", "dentes brancos", "clareamento a laser"]
+    "keywords": [
+      "clareamento dental",
+      "branqueamento dental",
+      "dentes brancos",
+      "clareamento a laser"
+    ]
   },
   {
     "id": 2,
-    "nome": "Implante Dentario",
+    "nome": "Implante Dentário",
     "slug": "implante-dentario",
-    "descricao": "Substituicao de dentes perdidos por raizes artificiais de titanio, proporcionando funcao e estetica natural.",
+    "descricao": "Substituição de dentes perdidos por raizes artificiais de titânio, proporcionando função e estética natural.",
     "preco_min": 2000,
     "preco_max": 8000,
-    "keywords": ["implante dentario", "implante dental", "implante de dente", "protese sobre implante"]
+    "keywords": [
+      "implante dentario",
+      "implante dental",
+      "implante de dente",
+      "protese sobre implante"
+    ]
   },
   {
     "id": 3,
@@ -24,70 +34,112 @@
     "descricao": "Facetas ultrafinas de porcelana aplicadas sobre os dentes para corrigir cor, forma e alinhamento.",
     "preco_min": 1500,
     "preco_max": 5000,
-    "keywords": ["lente de contato dental", "faceta de porcelana", "lente dental", "faceta dentaria"]
+    "keywords": [
+      "lente de contato dental",
+      "faceta de porcelana",
+      "lente dental",
+      "faceta dentaria"
+    ]
   },
   {
     "id": 4,
-    "nome": "Aparelho Ortodontico",
+    "nome": "Aparelho Ortodôntico",
     "slug": "aparelho-ortodontico",
-    "descricao": "Tratamento para alinhar os dentes e corrigir a mordida, disponivel em versoes metalicas, esteticas e invisiveis.",
+    "descricao": "Tratamento para alinhar os dentes e corrigir a mordida, disponível em versões metálicas, estéticas e invisíveis.",
     "preco_min": 150,
     "preco_max": 600,
-    "keywords": ["aparelho ortodontico", "ortodontia", "aparelho nos dentes", "aparelho invisivel", "invisalign"]
+    "keywords": [
+      "aparelho ortodontico",
+      "ortodontia",
+      "aparelho nos dentes",
+      "aparelho invisivel",
+      "invisalign"
+    ]
   },
   {
     "id": 5,
-    "nome": "Protese Dentaria",
+    "nome": "Prótese Dentária",
     "slug": "protese-dentaria",
-    "descricao": "Reposicao de dentes ausentes com proteses fixas ou removiveis, restaurando funcao mastigatoria e estetica.",
+    "descricao": "Reposição de dentes ausentes com próteses fixas ou removíveis, restaurando função mastigatória e estética.",
     "preco_min": 800,
     "preco_max": 6000,
-    "keywords": ["protese dentaria", "dentadura", "protese fixa", "protese removivel", "ponte dentaria"]
+    "keywords": [
+      "protese dentaria",
+      "dentadura",
+      "protese fixa",
+      "protese removivel",
+      "ponte dentaria"
+    ]
   },
   {
     "id": 6,
-    "nome": "Canal Dentario",
+    "nome": "Canal Dentário",
     "slug": "canal-dentario",
-    "descricao": "Tratamento endodontico para remover a polpa infectada do dente, eliminando dor e salvando o dente natural.",
+    "descricao": "Tratamento endodôntico para remover a polpa infectada do dente, eliminando dor e salvando o dente natural.",
     "preco_min": 400,
     "preco_max": 2000,
-    "keywords": ["canal dentario", "tratamento de canal", "endodontia", "canal no dente"]
+    "keywords": [
+      "canal dentario",
+      "tratamento de canal",
+      "endodontia",
+      "canal no dente"
+    ]
   },
   {
     "id": 7,
-    "nome": "Extracao de Siso",
+    "nome": "Extração de Siso",
     "slug": "extracao-de-siso",
-    "descricao": "Remocao cirurgica dos dentes do siso (terceiros molares) quando causam dor, infeccao ou problemas de espaco.",
+    "descricao": "Remoção cirúrgica dos dentes do siso (terceiros molares) quando causam dor, infecção ou problemas de espaço.",
     "preco_min": 200,
     "preco_max": 1500,
-    "keywords": ["extracao de siso", "dente do siso", "remocao do siso", "cirurgia de siso"]
+    "keywords": [
+      "extracao de siso",
+      "dente do siso",
+      "remocao do siso",
+      "cirurgia de siso"
+    ]
   },
   {
     "id": 8,
     "nome": "Limpeza Dental",
     "slug": "limpeza-dental",
-    "descricao": "Profilaxia profissional para remover tartaro e placa bacteriana, prevenindo caries e doencas gengivais.",
+    "descricao": "Profilaxia profissional para remover tártaro e placa bacteriana, prevenindo cáries e doenças gengivais.",
     "preco_min": 100,
     "preco_max": 400,
-    "keywords": ["limpeza dental", "profilaxia", "limpeza dos dentes", "remocao de tartaro"]
+    "keywords": [
+      "limpeza dental",
+      "profilaxia",
+      "limpeza dos dentes",
+      "remocao de tartaro"
+    ]
   },
   {
     "id": 9,
-    "nome": "Restauracao Dental",
+    "nome": "Restauração Dental",
     "slug": "restauracao-dental",
-    "descricao": "Reparo de dentes danificados por carie ou fratura usando resina composta ou outros materiais restauradores.",
+    "descricao": "Reparo de dentes danificados por cárie ou fratura usando resina composta ou outros materiais restauradores.",
     "preco_min": 100,
     "preco_max": 600,
-    "keywords": ["restauracao dental", "obturacao", "restauracao de dente", "resina dental"]
+    "keywords": [
+      "restauracao dental",
+      "obturacao",
+      "restauracao de dente",
+      "resina dental"
+    ]
   },
   {
     "id": 10,
     "nome": "Gengivoplastia",
     "slug": "gengivoplastia",
-    "descricao": "Cirurgia plastica gengival para corrigir o sorriso gengival e harmonizar o contorno da gengiva.",
+    "descricao": "Cirurgia plástica gengival para corrigir o sorriso gengival e harmonizar o contorno da gengiva.",
     "preco_min": 500,
     "preco_max": 3000,
-    "keywords": ["gengivoplastia", "cirurgia gengival", "sorriso gengival", "plastica gengival"]
+    "keywords": [
+      "gengivoplastia",
+      "cirurgia gengival",
+      "sorriso gengival",
+      "plastica gengival"
+    ]
   },
   {
     "id": 11,
@@ -96,61 +148,97 @@
     "descricao": "Tratamento periodontal para combater gengivite e periodontite, protegendo os tecidos de suporte dos dentes.",
     "preco_min": 200,
     "preco_max": 1500,
-    "keywords": ["tratamento de gengiva", "periodontia", "gengivite", "periodontite", "raspagem"]
+    "keywords": [
+      "tratamento de gengiva",
+      "periodontia",
+      "gengivite",
+      "periodontite",
+      "raspagem"
+    ]
   },
   {
     "id": 12,
-    "nome": "Coroa Dentaria",
+    "nome": "Coroa Dentária",
     "slug": "coroa-dentaria",
-    "descricao": "Capsula que recobre totalmente o dente danificado, restaurando sua forma, tamanho e resistencia.",
+    "descricao": "Cápsula que recobre totalmente o dente danificado, restaurando sua forma, tamanho e resistência.",
     "preco_min": 600,
     "preco_max": 3500,
-    "keywords": ["coroa dentaria", "coroa de porcelana", "coroa dental", "capsula dental"]
+    "keywords": [
+      "coroa dentaria",
+      "coroa de porcelana",
+      "coroa dental",
+      "capsula dental"
+    ]
   },
   {
     "id": 13,
-    "nome": "Aplicacao de Fluor",
+    "nome": "Aplicação de Flúor",
     "slug": "aplicacao-de-fluor",
-    "descricao": "Aplicacao profissional de fluor para fortalecer o esmalte dental e prevenir caries.",
+    "descricao": "Aplicação profissional de flúor para fortalecer o esmalte dental e prevenir cáries.",
     "preco_min": 50,
     "preco_max": 200,
-    "keywords": ["aplicacao de fluor", "fluor dental", "fluoretacao", "prevencao de carie"]
+    "keywords": [
+      "aplicacao de fluor",
+      "fluor dental",
+      "fluoretacao",
+      "prevencao de carie"
+    ]
   },
   {
     "id": 14,
     "nome": "Radiografia Dental",
     "slug": "radiografia-dental",
-    "descricao": "Exame de imagem para diagnosticar problemas dentarios nao visiveis a olho nu, como caries internas e lesoes osseas.",
+    "descricao": "Exame de imagem para diagnosticar problemas dentários não visíveis a olho nu, como cáries internas e lesões ósseas.",
     "preco_min": 30,
     "preco_max": 250,
-    "keywords": ["radiografia dental", "raio x dental", "panoramica", "radiografia panoramica"]
+    "keywords": [
+      "radiografia dental",
+      "raio x dental",
+      "panoramica",
+      "radiografia panoramica"
+    ]
   },
   {
     "id": 15,
-    "nome": "Harmonizacao Orofacial",
+    "nome": "Harmonização Orofacial",
     "slug": "harmonizacao-orofacial",
-    "descricao": "Conjunto de procedimentos esteticos faciais como botox, preenchimento labial e bichectomia realizados por dentistas.",
+    "descricao": "Conjunto de procedimentos estéticos faciais como botox, preenchimento labial e bichectomia realizados por dentistas.",
     "preco_min": 500,
     "preco_max": 5000,
-    "keywords": ["harmonizacao orofacial", "HOF", "botox dentista", "preenchimento labial", "bichectomia"]
+    "keywords": [
+      "harmonizacao orofacial",
+      "HOF",
+      "botox dentista",
+      "preenchimento labial",
+      "bichectomia"
+    ]
   },
   {
     "id": 16,
-    "nome": "Protese Protocolo",
+    "nome": "Prótese Protocolo",
     "slug": "protese-protocolo",
-    "descricao": "Protese fixa total sobre implantes, substituindo todos os dentes de uma arcada com resultado estetico e funcional.",
+    "descricao": "Protese fixa total sobre implantes, substituindo todos os dentes de uma arcada com resultado estético e funcional.",
     "preco_min": 8000,
     "preco_max": 30000,
-    "keywords": ["protese protocolo", "protocolo sobre implante", "all on four", "all on 4"]
+    "keywords": [
+      "protese protocolo",
+      "protocolo sobre implante",
+      "all on four",
+      "all on 4"
+    ]
   },
   {
     "id": 17,
     "nome": "Selante Dental",
     "slug": "selante-dental",
-    "descricao": "Aplicacao de resina protetora nos sulcos dos dentes posteriores para prevenir caries em criancas e adultos.",
+    "descricao": "Aplicação de resina protetora nos sulcos dos dentes posteriores para prevenir cáries em crianças e adultos.",
     "preco_min": 50,
     "preco_max": 200,
-    "keywords": ["selante dental", "selante de fissura", "prevencao carie"]
+    "keywords": [
+      "selante dental",
+      "selante de fissura",
+      "prevencao carie"
+    ]
   },
   {
     "id": 18,
@@ -159,24 +247,40 @@
     "descricao": "Dispositivo personalizado para proteger os dentes do ranger noturno e aliviar dores na ATM.",
     "preco_min": 300,
     "preco_max": 1500,
-    "keywords": ["placa de bruxismo", "bruxismo", "placa miorrelaxante", "ranger os dentes", "ATM"]
+    "keywords": [
+      "placa de bruxismo",
+      "bruxismo",
+      "placa miorrelaxante",
+      "ranger os dentes",
+      "ATM"
+    ]
   },
   {
     "id": 19,
     "nome": "Odontopediatria",
     "slug": "odontopediatria",
-    "descricao": "Atendimento odontologico especializado para bebes, criancas e adolescentes, focado em prevencao e tratamento ludico.",
+    "descricao": "Atendimento odontológico especializado para bebês, crianças e adolescentes, focado em prevenção e tratamento lúdico.",
     "preco_min": 100,
     "preco_max": 500,
-    "keywords": ["odontopediatria", "dentista infantil", "dentista para crianca", "odontologia pediatrica"]
+    "keywords": [
+      "odontopediatria",
+      "dentista infantil",
+      "dentista para crianca",
+      "odontologia pediatrica"
+    ]
   },
   {
     "id": 20,
-    "nome": "Avaliacao Odontologica",
+    "nome": "Avaliação Odontológica",
     "slug": "avaliacao-odontologica",
-    "descricao": "Consulta inicial com exame clinico completo para diagnostico e planejamento do tratamento dentario.",
+    "descricao": "Consulta inicial com exame clínico completo para diagnóstico e planejamento do tratamento dentário.",
     "preco_min": 0,
     "preco_max": 200,
-    "keywords": ["avaliacao odontologica", "consulta dentista", "exame dental", "avaliacao gratis"]
+    "keywords": [
+      "avaliacao odontologica",
+      "consulta dentista",
+      "exame dental",
+      "avaliacao gratis"
+    ]
   }
 ]

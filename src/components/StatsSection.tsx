@@ -49,7 +49,7 @@ export function CityStatsSection({
     <StatsSection
       stats={[
         {
-          label: "Populacao",
+          label: "População",
           value: formatNumberFull(populacao),
           icon: "population",
         },

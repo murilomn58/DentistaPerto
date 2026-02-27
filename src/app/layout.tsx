@@ -12,7 +12,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} — Encontre Dentistas Perto de Voce`,
+    default: `${SITE_NAME} — Encontre Dentistas Perto de Você`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,

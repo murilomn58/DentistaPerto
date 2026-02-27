@@ -26,10 +26,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Encontre um <span className="text-blue-600">dentista</span> perto de
-            voce
+            você
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Compare precos, especialidades e encontre o dentista ideal em mais de{" "}
+            Compare preços, especialidades e encontre o dentista ideal em mais de{" "}
             {formatNumber(getCityCount())} cidades do Brasil.
           </p>
           <div className="flex justify-center mb-8">
@@ -74,7 +74,7 @@ export default function Home() {
               Dentistas em todo o Brasil
             </h2>
             <p className="text-gray-600 mb-6">
-              Clique em um estado para ver as cidades disponiveis.
+              Clique em um estado para ver as cidades disponíveis.
             </p>
             <BrazilMap />
           </div>
@@ -99,7 +99,7 @@ export default function Home() {
             Procedimentos mais buscados
           </h2>
           <p className="text-gray-600 mb-8 text-center">
-            Veja os precos medios dos procedimentos odontologicos mais populares.
+            Veja os preços médios dos procedimentos odontológicos mais populares.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {procedures.map((proc) => (

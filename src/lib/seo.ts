@@ -9,7 +9,7 @@ export function generateCityMetadata(city: City): Metadata {
   const ufName = UF_MAP[city.uf] || city.uf;
   const dentistas = getDentistCount(city.uf);
   const title = `Dentista em ${city.nome} - ${city.uf} | ${SITE_NAME}`;
-  const description = `Encontre dentistas em ${city.nome}, ${ufName}. ${dentistas > 0 ? `${formatNumberFull(dentistas)} dentistas registrados no estado.` : ""} Compare precos, especialidades e agende sua consulta.`;
+  const description = `Encontre dentistas em ${city.nome}, ${ufName}. ${dentistas > 0 ? `${formatNumberFull(dentistas)} dentistas registrados no estado.` : ""} Compare preços, especialidades e agende sua consulta.`;
 
   return {
     title,
@@ -32,7 +32,7 @@ export function generateUFMetadata(uf: string): Metadata {
   const ufName = UF_MAP[uf] || uf;
   const dentistas = getDentistCount(uf);
   const title = `Dentistas em ${ufName} (${uf}) | ${SITE_NAME}`;
-  const description = `Encontre dentistas em ${ufName}. ${dentistas > 0 ? `${formatNumberFull(dentistas)} dentistas registrados.` : ""} Veja as principais cidades e especialidades disponiveis.`;
+  const description = `Encontre dentistas em ${ufName}. ${dentistas > 0 ? `${formatNumberFull(dentistas)} dentistas registrados.` : ""} Veja as principais cidades e especialidades disponíveis.`;
 
   return {
     title,
@@ -56,7 +56,7 @@ export function generateProcedureMetadata(
   city: City
 ): Metadata {
   const title = `Quanto custa ${procedure.nome} em ${city.nome} - ${city.uf}? | ${SITE_NAME}`;
-  const description = `Precos de ${procedure.nome} em ${city.nome}: de R$ ${procedure.preco_min} a R$ ${procedure.preco_max}. Compare valores e encontre o melhor dentista.`;
+  const description = `Preços de ${procedure.nome} em ${city.nome}: de R$ ${procedure.preco_min} a R$ ${procedure.preco_max}. Compare valores e encontre o melhor dentista.`;
 
   return {
     title,

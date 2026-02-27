@@ -1,6 +1,6 @@
 export const SITE_NAME = "DentistaPerto";
 export const SITE_DESCRIPTION =
-  "Encontre dentistas perto de voce. Compare precos, especialidades e avaliações de dentistas em mais de 5.000 cidades do Brasil.";
+  "Encontre dentistas perto de você. Compare preços, especialidades e avaliações de dentistas em mais de 5.000 cidades do Brasil.";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://dentistaperto.com.br";
 export const ODONTO_CONNECT_URL =
@@ -33,8 +33,8 @@ export const ISR_REVALIDATE = 86400; // 24 hours
 export const SITEMAP_CHUNK_SIZE = 2000;
 
 export const NAV_LINKS = [
-  { href: "/", label: "Inicio" },
-  { href: "/quanto-custa/clareamento-dental/sao-paulo-sp", label: "Precos" },
+  { href: "/", label: "Início" },
+  { href: "/quanto-custa/clareamento-dental/sao-paulo-sp", label: "Preços" },
   { href: "/blog", label: "Blog" },
   { href: "/sobre", label: "Sobre" },
 ] as const;

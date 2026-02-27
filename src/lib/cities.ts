@@ -49,20 +49,15 @@ export function getNearbyCities(slug: string, limit = 6): City[] {
 
 export function getCapitals(): City[] {
   const capitalNames = new Set([
-    "Rio Branco", "Maceio", "Manaus", "Macapa", "Salvador", "Fortaleza",
-    "Brasilia", "Vitoria", "Goiania", "Sao Luis", "Belo Horizonte",
-    "Campo Grande", "Cuiaba", "Belem", "Joao Pessoa", "Recife",
+    "Rio Branco", "Maceió", "Manaus", "Macapá", "Salvador", "Fortaleza",
+    "Brasília", "Vitória", "Goiânia", "São Luís", "Belo Horizonte",
+    "Campo Grande", "Cuiabá", "Belém", "João Pessoa", "Recife",
     "Teresina", "Curitiba", "Rio de Janeiro", "Natal", "Porto Velho",
-    "Boa Vista", "Porto Alegre", "Florianopolis", "Aracaju",
-    "Sao Paulo", "Palmas",
+    "Boa Vista", "Porto Alegre", "Florianópolis", "Aracaju",
+    "São Paulo", "Palmas",
   ]);
 
-  return cities.filter((c) => {
-    const normalized = c.nome
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
-    return capitalNames.has(normalized);
-  });
+  return cities.filter((c) => capitalNames.has(c.nome));
 }
 
 export function getUFs(): string[] {

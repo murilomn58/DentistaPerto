@@ -31,10 +31,10 @@ export function CTAOdontoConnect({
   return (
     <section className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white text-center">
       <h2 className="text-2xl font-bold mb-3">
-        Encontre dentistas avaliados perto de voce
+        Encontre dentistas avaliados perto de você
       </h2>
       <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-        O OdontoConnect conecta voce com dentistas verificados, com avaliacoes
+        O OdontoConnect conecta você com dentistas verificados, com avaliações
         reais de pacientes e agendamento online.
       </p>
       <a

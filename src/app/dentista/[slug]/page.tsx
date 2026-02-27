@@ -93,7 +93,7 @@ function UFView({ uf }: { uf: string }) {
     <>
       <SchemaMarkup
         data={generateBreadcrumbSchema([
-          { name: "Inicio", url: SITE_URL },
+          { name: "Início", url: SITE_URL },
           { name: ufName, url: `${SITE_URL}/dentista/${uf.toLowerCase()}` },
         ])}
       />
@@ -101,7 +101,7 @@ function UFView({ uf }: { uf: string }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
           items={[
-            { label: "Inicio", href: "/" },
+            { label: "Início", href: "/" },
             { label: ufName, href: `/dentista/${uf.toLowerCase()}` },
           ]}
         />
@@ -112,8 +112,8 @@ function UFView({ uf }: { uf: string }) {
         <p className="text-lg text-gray-600 mb-8">
           Encontre dentistas em {ufName}. O estado possui{" "}
           {formatNumberFull(ufStats?.total || 0)} dentistas registrados,
-          atendendo uma populacao de {formatNumberFull(totalPop)} habitantes em{" "}
-          {cities.length} municipios.
+          atendendo uma população de {formatNumberFull(totalPop)} habitantes em{" "}
+          {cities.length} municípios.
         </p>
 
         <section className="mb-12">
@@ -125,7 +125,7 @@ function UFView({ uf }: { uf: string }) {
                 icon: "dentists",
               },
               {
-                label: "Populacao",
+                label: "População",
                 value: formatNumber(totalPop),
                 icon: "population",
               },
@@ -135,7 +135,7 @@ function UFView({ uf }: { uf: string }) {
                 icon: "ratio",
               },
               {
-                label: "Municipios",
+                label: "Municípios",
                 value: String(cities.length),
                 icon: "cities",
               },
@@ -193,23 +193,23 @@ function CityView({ citySlug }: { citySlug: string }) {
   const faqs = [
     {
       question: `Quantos dentistas tem em ${city.nome}?`,
-      answer: `${city.nome} faz parte do estado de ${ufName}, que possui aproximadamente ${formatNumberFull(ufStats?.total || 0)} dentistas registrados no Conselho Federal de Odontologia (CFO). A proporcao e de ${ufStats?.proporcao || 0} dentistas para cada 1.000 habitantes.`,
+      answer: `${city.nome} faz parte do estado de ${ufName}, que possui aproximadamente ${formatNumberFull(ufStats?.total || 0)} dentistas registrados no Conselho Federal de Odontologia (CFO). A proporção é de ${ufStats?.proporcao || 0} dentistas para cada 1.000 habitantes.`,
     },
     {
       question: `Quanto custa uma consulta com dentista em ${city.nome}?`,
-      answer: `O valor de uma consulta odontologica em ${city.nome} varia entre R$ 100 e R$ 300, dependendo da especialidade e do profissional. Muitos dentistas oferecem avaliacao inicial gratuita.`,
+      answer: `O valor de uma consulta odontológica em ${city.nome} varia entre R$ 100 e R$ 300, dependendo da especialidade e do profissional. Muitos dentistas oferecem avaliação inicial gratuita.`,
     },
     {
       question: `Como encontrar um bom dentista em ${city.nome}?`,
-      answer: `Para encontrar um dentista de confianca em ${city.nome}, verifique o registro no CRO, busque avaliacoes de outros pacientes, confirme a especialidade desejada e agende uma consulta de avaliacao. O OdontoConnect pode ajudar voce a encontrar profissionais verificados.`,
+      answer: `Para encontrar um dentista de confiança em ${city.nome}, verifique o registro no CRO, busque avaliações de outros pacientes, confirme a especialidade desejada e agende uma consulta de avaliação. O OdontoConnect pode ajudar você a encontrar profissionais verificados.`,
     },
     {
-      question: `Quais especialidades odontologicas estao disponiveis em ${city.nome}?`,
-      answer: `Em ${city.nome} voce encontra dentistas de diversas especialidades, incluindo ortodontia, implantodontia, endodontia, periodontia, odontopediatria, cirurgia bucomaxilofacial e harmonizacao orofacial.`,
+      question: `Quais especialidades odontológicas estão disponíveis em ${city.nome}?`,
+      answer: `Em ${city.nome} você encontra dentistas de diversas especialidades, incluindo ortodontia, implantodontia, endodontia, periodontia, odontopediatria, cirurgia bucomaxilofacial e harmonização orofacial.`,
     },
     {
       question: `Qual o melhor plano dental para ${city.nome}?`,
-      answer: `Os planos dentais mais populares em ${ufName} incluem Amil Dental, Bradesco Dental e SulAmerica Odonto. Valores variam de R$ 20 a R$ 100/mes dependendo da cobertura.`,
+      answer: `Os planos dentais mais populares em ${ufName} incluem Amil Dental, Bradesco Dental e SulAmérica Odonto. Valores variam de R$ 20 a R$ 100/mês dependendo da cobertura.`,
     },
   ];
 
@@ -221,7 +221,7 @@ function CityView({ citySlug }: { citySlug: string }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
           items={[
-            { label: "Inicio", href: "/" },
+            { label: "Início", href: "/" },
             { label: ufName, href: `/dentista/${city.uf.toLowerCase()}` },
             { label: city.nome, href: `/dentista/${city.slug}` },
           ]}
@@ -234,7 +234,7 @@ function CityView({ citySlug }: { citySlug: string }) {
         </h1>
         <p className="text-lg text-gray-600 mb-8">
           Encontre os melhores dentistas em {city.nome}, {ufName}. Compare
-          precos, especialidades e agende sua consulta com profissionais
+          preços, especialidades e agende sua consulta com profissionais
           verificados.
         </p>
 
@@ -275,7 +275,7 @@ function CityView({ citySlug }: { citySlug: string }) {
         {nearbyCities.length > 0 && (
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Dentistas em cidades proximas
+              Dentistas em cidades próximas
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {nearbyCities.map((c) => (

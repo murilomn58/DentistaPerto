@@ -4,7 +4,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: `Sobre | ${SITE_NAME}`,
-  description: `Conhea o ${SITE_NAME}, a plataforma que ajuda voce a encontrar dentistas perto de voce em todo o Brasil.`,
+  description: `Conheça o ${SITE_NAME}, a plataforma que ajuda você a encontrar dentistas perto de você em todo o Brasil.`,
 };
 
 export default function SobrePage() {
@@ -12,7 +12,7 @@ export default function SobrePage() {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: "Inicio", href: "/" },
+          { label: "Início", href: "/" },
           { label: "Sobre", href: "/sobre" },
         ]}
       />
@@ -23,23 +23,23 @@ export default function SobrePage() {
 
       <div className="prose prose-gray max-w-none">
         <p>
-          O {SITE_NAME} e uma plataforma gratuita que ajuda brasileiros a
-          encontrar dentistas de qualidade em sua cidade. Nosso objetivo e
-          democratizar o acesso a informacao odontologica no Brasil.
+          O {SITE_NAME} é uma plataforma gratuita que ajuda brasileiros a
+          encontrar dentistas de qualidade em sua cidade. Nosso objetivo é
+          democratizar o acesso à informação odontológica no Brasil.
         </p>
 
-        <h2>Nossa Missao</h2>
+        <h2>Nossa Missão</h2>
         <p>
-          Acreditamos que todos os brasileiros merecem acesso facil a informacoes
-          sobre saude bucal. Por isso, reunimos dados de mais de 5.000 cidades,
-          20 procedimentos e milhares de profissionais para ajudar voce a tomar a
-          melhor decisao.
+          Acreditamos que todos os brasileiros merecem acesso fácil a informações
+          sobre saúde bucal. Por isso, reunimos dados de mais de 5.000 cidades,
+          20 procedimentos e milhares de profissionais para ajudar você a tomar a
+          melhor decisão.
         </p>
 
         <h2>Como Funciona</h2>
         <p>
-          Basta buscar sua cidade ou estado para encontrar informacoes sobre
-          dentistas disponiveis, precos medios de procedimentos e dicas de saude
+          Basta buscar sua cidade ou estado para encontrar informações sobre
+          dentistas disponíveis, preços médios de procedimentos e dicas de saúde
           bucal. Quando estiver pronto para agendar, o{" "}
           <a
             href="https://odonto-connect.vercel.app"
@@ -48,13 +48,13 @@ export default function SobrePage() {
           >
             OdontoConnect
           </a>{" "}
-          conecta voce diretamente com profissionais verificados.
+          conecta você diretamente com profissionais verificados.
         </p>
 
         <h2>Vertech</h2>
         <p>
-          O {SITE_NAME} e um produto da Vertech, empresa de tecnologia focada em
-          solucoes inovadoras para o setor de saude.
+          O {SITE_NAME} é um produto da Vertech, empresa de tecnologia focada em
+          soluções inovadoras para o setor de saúde.
         </p>
       </div>
     </div>

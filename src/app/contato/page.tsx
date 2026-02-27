@@ -13,7 +13,7 @@ export default function ContatoPage() {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: "Inicio", href: "/" },
+          { label: "Início", href: "/" },
           { label: "Contato", href: "/contato" },
         ]}
       />
@@ -22,7 +22,7 @@ export default function ContatoPage() {
 
       <div className="prose prose-gray max-w-none mb-8">
         <p>
-          Tem alguma duvida, sugestao ou quer ser parceiro do {SITE_NAME}? Entre
+          Tem alguma dúvida, sugestão ou quer ser parceiro do {SITE_NAME}? Entre
           em contato conosco pelos canais abaixo.
         </p>
       </div>

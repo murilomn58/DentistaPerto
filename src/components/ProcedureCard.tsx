@@ -53,7 +53,7 @@ export function ProcedureCard({
       </p>
       <div className="text-sm font-medium text-blue-700">
         {procedure.preco_min === 0
-          ? `Ate ${formatCurrency(procedure.preco_max)}`
+          ? `Até ${formatCurrency(procedure.preco_max)}`
           : `${formatCurrency(procedure.preco_min)} - ${formatCurrency(procedure.preco_max)}`}
       </div>
     </Link>

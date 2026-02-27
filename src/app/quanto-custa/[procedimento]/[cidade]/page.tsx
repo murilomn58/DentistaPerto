@@ -60,19 +60,19 @@ export default async function ProcedureCityPage({
   const faqs = [
     {
       question: `Quanto custa ${procedure.nome} em ${city.nome}?`,
-      answer: `O preco medio de ${procedure.nome} em ${city.nome} varia entre ${formatCurrency(procedure.preco_min)} e ${formatCurrency(procedure.preco_max)}, dependendo do profissional, material utilizado e complexidade do caso.`,
+      answer: `O preço médio de ${procedure.nome} em ${city.nome} varia entre ${formatCurrency(procedure.preco_min)} e ${formatCurrency(procedure.preco_max)}, dependendo do profissional, material utilizado e complexidade do caso.`,
     },
     {
       question: `${procedure.nome} doi?`,
-      answer: `O procedimento de ${procedure.nome} e geralmente realizado com anestesia local, minimizando qualquer desconforto. O dentista ira orientar sobre os cuidados pos-procedimento para uma recuperacao tranquila.`,
+      answer: `O procedimento de ${procedure.nome} é geralmente realizado com anestesia local, minimizando qualquer desconforto. O dentista irá orientar sobre os cuidados pós-procedimento para uma recuperação tranquila.`,
     },
     {
       question: `Quanto tempo dura o ${procedure.nome}?`,
-      answer: `A duracao do ${procedure.nome} varia conforme a complexidade do caso. Em geral, uma sessao leva entre 30 minutos e 2 horas. Alguns tratamentos podem exigir mais de uma visita.`,
+      answer: `A duração do ${procedure.nome} varia conforme a complexidade do caso. Em geral, uma sessão leva entre 30 minutos e 2 horas. Alguns tratamentos podem exigir mais de uma visita.`,
     },
     {
       question: `Plano dental cobre ${procedure.nome} em ${city.nome}?`,
-      answer: `A cobertura de ${procedure.nome} depende do plano contratado. Planos basicos podem nao cobrir procedimentos esteticos. Consulte seu plano ou opte por pagamento particular com condicoes especiais.`,
+      answer: `A cobertura de ${procedure.nome} depende do plano contratado. Planos básicos podem não cobrir procedimentos estéticos. Consulte seu plano ou opte por pagamento particular com condições especiais.`,
     },
   ];
 
@@ -81,7 +81,7 @@ export default async function ProcedureCityPage({
       <SchemaMarkup data={generateFAQSchema(faqs)} />
       <SchemaMarkup
         data={generateBreadcrumbSchema([
-          { name: "Inicio", url: SITE_URL },
+          { name: "Início", url: SITE_URL },
           { name: city.nome, url: `${SITE_URL}/dentista/${city.slug}` },
           {
             name: procedure.nome,
@@ -93,7 +93,7 @@ export default async function ProcedureCityPage({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
           items={[
-            { label: "Inicio", href: "/" },
+            { label: "Início", href: "/" },
             { label: ufName, href: `/dentista/${city.uf.toLowerCase()}` },
             { label: city.nome, href: `/dentista/${city.slug}` },
             {
@@ -113,11 +113,11 @@ export default async function ProcedureCityPage({
         <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8 mb-8">
           <div className="text-center">
             <p className="text-sm text-blue-600 font-medium mb-2">
-              Faixa de preco em {city.nome} - {city.uf}
+              Faixa de preço em {city.nome} - {city.uf}
             </p>
             <div className="text-4xl font-bold text-gray-900 mb-2">
               {procedure.preco_min === 0
-                ? `Ate ${formatCurrency(procedure.preco_max)}`
+                ? `Até ${formatCurrency(procedure.preco_max)}`
                 : `${formatCurrency(procedure.preco_min)} - ${formatCurrency(procedure.preco_max)}`}
             </div>
             <p className="text-sm text-gray-500">
@@ -135,11 +135,11 @@ export default async function ProcedureCityPage({
             {procedure.descricao}
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Em {city.nome}, {ufName}, voce encontra diversos profissionais
-            qualificados para realizar {procedure.nome}. Os precos podem variar
-            de acordo com a experiencia do dentista, a localizacao do
-            consultorio, os materiais utilizados e a complexidade do seu caso
-            especifico.
+            Em {city.nome}, {ufName}, você encontra diversos profissionais
+            qualificados para realizar {procedure.nome}. Os preços podem variar
+            de acordo com a experiência do dentista, a localização do
+            consultório, os materiais utilizados e a complexidade do seu caso
+            específico.
           </p>
         </section>
 
@@ -170,7 +170,7 @@ export default async function ProcedureCityPage({
                 <span className="font-medium text-gray-900">{proc.nome}</span>
                 <span className="text-sm text-blue-600">
                   {proc.preco_min === 0
-                    ? `Ate ${formatCurrency(proc.preco_max)}`
+                    ? `Até ${formatCurrency(proc.preco_max)}`
                     : `A partir de ${formatCurrency(proc.preco_min)}`}
                 </span>
               </Link>

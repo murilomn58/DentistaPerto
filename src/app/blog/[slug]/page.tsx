@@ -84,7 +84,7 @@ export default async function BlogPostPage({
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
           items={[
-            { label: "Inicio", href: "/" },
+            { label: "Início", href: "/" },
             { label: "Blog", href: "/blog" },
             { label: post.titulo, href: `/blog/${post.slug}` },
           ]}
