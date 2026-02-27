@@ -12,7 +12,9 @@ import {
   Scan,
 } from "lucide-react";
 import type { Procedure } from "@/types";
+import type { City } from "@/types";
 import { formatCurrency } from "@/lib/utils";
+import { getCityPrice } from "@/lib/pricing";
 
 const procedureIcons: Record<string, React.ElementType> = {
   "clareamento-dental": Sparkles,
@@ -30,14 +32,21 @@ const procedureIcons: Record<string, React.ElementType> = {
 export function ProcedureCard({
   procedure,
   citySlug,
+  city,
 }: {
   procedure: Procedure;
   citySlug?: string;
+  city?: City;
 }) {
   const Icon = procedureIcons[procedure.slug] || Stethoscope;
   const href = citySlug
     ? `/quanto-custa/${procedure.slug}/${citySlug}`
     : `/quanto-custa/${procedure.slug}/sao-paulo-sp`;
+
+  // Use city-adjusted price if city is provided
+  const price = city ? getCityPrice(procedure, city) : null;
+  const min = price ? price.min : procedure.preco_min;
+  const max = price ? price.max : procedure.preco_max;
 
   return (
     <Link
@@ -52,9 +61,9 @@ export function ProcedureCard({
         {procedure.descricao}
       </p>
       <div className="text-sm font-medium text-blue-700">
-        {procedure.preco_min === 0
-          ? `Até ${formatCurrency(procedure.preco_max)}`
-          : `${formatCurrency(procedure.preco_min)} - ${formatCurrency(procedure.preco_max)}`}
+        {min === 0
+          ? `Até ${formatCurrency(max)}`
+          : `${formatCurrency(min)} - ${formatCurrency(max)}`}
       </div>
     </Link>
   );

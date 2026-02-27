@@ -13,6 +13,8 @@ import { UF_MAP } from "@/types";
 import { SSG_PROCEDURE_CITIES, SSG_TOP_PROCEDURES, SITE_URL } from "@/lib/constants";
 import { formatCurrency } from "@/lib/utils";
 import { generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo";
+import { getCityPrice, getPriceContext } from "@/lib/pricing";
+import { TrendingUp, TrendingDown, Minus, Info } from "lucide-react";
 
 export const dynamicParams = true;
 export const revalidate = 86400;
@@ -57,24 +59,43 @@ export default async function ProcedureCityPage({
     (p) => p.slug !== procedure.slug
   );
 
+  // Preço ajustado para a cidade
+  const cityPrice = getCityPrice(procedure, city);
+  const priceContext = getPriceContext(city);
+
   const faqs = [
     {
       question: `Quanto custa ${procedure.nome} em ${city.nome}?`,
-      answer: `O preço médio de ${procedure.nome} em ${city.nome} varia entre ${formatCurrency(procedure.preco_min)} e ${formatCurrency(procedure.preco_max)}, dependendo do profissional, material utilizado e complexidade do caso.`,
+      answer: `O preço estimado de ${procedure.nome} em ${city.nome} varia entre ${formatCurrency(cityPrice.min)} e ${formatCurrency(cityPrice.max)}. Este valor é ajustado para a região ${city.regiao} e o porte da cidade, e pode variar conforme o profissional, material utilizado e complexidade do caso.`,
     },
     {
-      question: `${procedure.nome} doi?`,
+      question: `O preço de ${procedure.nome} é mais caro em ${city.nome}?`,
+      answer: `Os preços em ${city.nome} estão ${cityPrice.label}. A média nacional de ${procedure.nome} fica entre ${formatCurrency(procedure.preco_min)} e ${formatCurrency(procedure.preco_max)}. Fatores como custo de vida, concorrência e infraestrutura local influenciam nos valores.`,
+    },
+    {
+      question: `${procedure.nome} dói?`,
       answer: `O procedimento de ${procedure.nome} é geralmente realizado com anestesia local, minimizando qualquer desconforto. O dentista irá orientar sobre os cuidados pós-procedimento para uma recuperação tranquila.`,
-    },
-    {
-      question: `Quanto tempo dura o ${procedure.nome}?`,
-      answer: `A duração do ${procedure.nome} varia conforme a complexidade do caso. Em geral, uma sessão leva entre 30 minutos e 2 horas. Alguns tratamentos podem exigir mais de uma visita.`,
     },
     {
       question: `Plano dental cobre ${procedure.nome} em ${city.nome}?`,
       answer: `A cobertura de ${procedure.nome} depende do plano contratado. Planos básicos podem não cobrir procedimentos estéticos. Consulte seu plano ou opte por pagamento particular com condições especiais.`,
     },
   ];
+
+  const PriceIcon =
+    cityPrice.label.includes("acima") ? TrendingUp :
+    cityPrice.label.includes("abaixo") ? TrendingDown :
+    Minus;
+
+  const priceColor =
+    cityPrice.label.includes("acima") ? "text-orange-600" :
+    cityPrice.label.includes("abaixo") ? "text-green-600" :
+    "text-blue-600";
+
+  const priceBg =
+    cityPrice.label.includes("acima") ? "bg-orange-50 border-orange-100" :
+    cityPrice.label.includes("abaixo") ? "bg-green-50 border-green-100" :
+    "bg-blue-50 border-blue-100";
 
   return (
     <>
@@ -109,20 +130,35 @@ export default async function ProcedureCityPage({
           Quanto custa {procedure.nome} em {city.nome}?
         </h1>
 
-        {/* Price Range */}
-        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8 mb-8">
+        {/* Price Range - City-specific */}
+        <div className={`border rounded-2xl p-8 mb-8 ${priceBg}`}>
           <div className="text-center">
-            <p className="text-sm text-blue-600 font-medium mb-2">
-              Faixa de preço em {city.nome} - {city.uf}
+            <p className={`text-sm font-medium mb-2 ${priceColor}`}>
+              Preço estimado em {city.nome} - {city.uf}
             </p>
             <div className="text-4xl font-bold text-gray-900 mb-2">
-              {procedure.preco_min === 0
-                ? `Até ${formatCurrency(procedure.preco_max)}`
-                : `${formatCurrency(procedure.preco_min)} - ${formatCurrency(procedure.preco_max)}`}
+              {cityPrice.min === 0
+                ? `Até ${formatCurrency(cityPrice.max)}`
+                : `${formatCurrency(cityPrice.min)} - ${formatCurrency(cityPrice.max)}`}
             </div>
-            <p className="text-sm text-gray-500">
-              *Valores aproximados. Consulte diretamente com o dentista.
-            </p>
+            <div className="flex items-center justify-center gap-2 mt-3">
+              <PriceIcon className={`w-4 h-4 ${priceColor}`} />
+              <span className={`text-sm font-medium capitalize ${priceColor}`}>
+                {cityPrice.label}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* National Reference */}
+        <div className="flex items-start gap-3 bg-gray-50 border border-gray-100 rounded-xl p-4 mb-8">
+          <Info className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+          <div className="text-sm text-gray-500">
+            <span className="font-medium text-gray-700">Referência nacional: </span>
+            {procedure.preco_min === 0
+              ? `Até ${formatCurrency(procedure.preco_max)}`
+              : `${formatCurrency(procedure.preco_min)} - ${formatCurrency(procedure.preco_max)}`}
+            {" "}&#8226; Valores aproximados que podem variar conforme o profissional e complexidade do caso.
           </div>
         </div>
 
@@ -134,12 +170,18 @@ export default async function ProcedureCityPage({
           <p className="text-gray-600 leading-relaxed">
             {procedure.descricao}
           </p>
+          <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
+            Preços em {city.nome}, {ufName}
+          </h3>
           <p className="text-gray-600 leading-relaxed">
-            Em {city.nome}, {ufName}, você encontra diversos profissionais
-            qualificados para realizar {procedure.nome}. Os preços podem variar
-            de acordo com a experiência do dentista, a localização do
-            consultório, os materiais utilizados e a complexidade do seu caso
-            específico.
+            {priceContext}
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            Para {procedure.nome} especificamente, os valores em {city.nome} ficam
+            entre {formatCurrency(cityPrice.min)} e {formatCurrency(cityPrice.max)}.
+            Profissionais mais experientes ou com equipamentos de última geração
+            podem cobrar valores na faixa superior, enquanto clínicas populares
+            e recém-formados tendem a oferecer preços mais acessíveis.
           </p>
         </section>
 
@@ -161,20 +203,23 @@ export default async function ProcedureCityPage({
             Outros procedimentos em {city.nome}
           </h2>
           <div className="grid sm:grid-cols-2 gap-3">
-            {otherProcedures.slice(0, 6).map((proc) => (
-              <Link
-                key={proc.slug}
-                href={`/quanto-custa/${proc.slug}/${city.slug}`}
-                className="flex items-center justify-between p-4 bg-white border border-gray-100 rounded-lg hover:border-blue-200 transition-colors"
-              >
-                <span className="font-medium text-gray-900">{proc.nome}</span>
-                <span className="text-sm text-blue-600">
-                  {proc.preco_min === 0
-                    ? `Até ${formatCurrency(proc.preco_max)}`
-                    : `A partir de ${formatCurrency(proc.preco_min)}`}
-                </span>
-              </Link>
-            ))}
+            {otherProcedures.slice(0, 6).map((proc) => {
+              const procPrice = getCityPrice(proc, city);
+              return (
+                <Link
+                  key={proc.slug}
+                  href={`/quanto-custa/${proc.slug}/${city.slug}`}
+                  className="flex items-center justify-between p-4 bg-white border border-gray-100 rounded-lg hover:border-blue-200 transition-colors"
+                >
+                  <span className="font-medium text-gray-900">{proc.nome}</span>
+                  <span className="text-sm text-blue-600">
+                    {procPrice.min === 0
+                      ? `Até ${formatCurrency(procPrice.max)}`
+                      : `A partir de ${formatCurrency(procPrice.min)}`}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </section>
 

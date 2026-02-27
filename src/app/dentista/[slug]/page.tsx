@@ -261,6 +261,7 @@ function CityView({ citySlug }: { citySlug: string }) {
                 key={proc.slug}
                 procedure={proc}
                 citySlug={city.slug}
+                city={city}
               />
             ))}
           </div>
