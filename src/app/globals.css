@@ -3,12 +3,20 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #111827;
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-display: var(--font-outfit), system-ui, sans-serif;
 }
 
 body {
   background: var(--color-background);
   color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display font utility */
+.font-display {
+  font-family: var(--font-display);
 }
 
 /* Premium gradient text */
@@ -113,4 +121,56 @@ body {
 
 .icon-gradient-solid {
   background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+}
+
+/* Dot grid pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Dark section mesh gradient */
+.mesh-gradient-dark {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(8, 145, 178, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(37, 99, 235, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(34, 211, 238, 0.08) 0%, transparent 50%),
+    #0F172A;
+}
+
+/* Subtle noise texture overlay */
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 30%, #0891b2 70%, #164e63 100%);
+}
+
+/* Glow ring for map card */
+.glow-ring {
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.2),
+    0 0 20px rgba(34, 211, 238, 0.1),
+    0 0 60px rgba(34, 211, 238, 0.05);
+}
+
+/* Population bar animation */
+@keyframes fill-bar {
+  from { width: 0; }
+}
+
+.animate-fill-bar {
+  animation: fill-bar 0.8s ease-out forwards;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
