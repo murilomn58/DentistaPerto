@@ -14,7 +14,7 @@ O visitante pode buscar uma cidade pelo nome ou navegar pelo mapa do Brasil. As 
 - Blog, sitemap e metadados para indexação.
 - Links de encaminhamento com parâmetros de origem da visita.
 
-O agendamento ocorre na plataforma parceira. As faixas de preço são referências informativas; não são orçamentos emitidos por uma clínica nem consultas em tempo real a prestadores.
+Os botões de divulgação abrem o aplicativo OdontoConnect na Google Play, preservando os parâmetros de origem da visita. O link de WhatsApp na página Contato continua disponível para atendimento. O agendamento ocorre na plataforma parceira. As faixas de preço são referências informativas; não são orçamentos emitidos por uma clínica nem consultas em tempo real a prestadores.
 
 ## Executar localmente
 

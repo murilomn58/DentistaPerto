@@ -100,7 +100,7 @@ export default function Home() {
                 <ExternalLink className="h-4 w-4 opacity-50 group-hover:opacity-100 transition-opacity" />
               </a>
               <span className="text-sm text-blue-200/60">
-                Agende pelo {PARTNER.name}
+                Encontre dentistas no app {PARTNER.name} para Android
               </span>
             </div>
           </ScrollReveal>

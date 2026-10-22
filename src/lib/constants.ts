@@ -11,13 +11,13 @@ export const PARTNER = {
   name: process.env.NEXT_PUBLIC_PARTNER_NAME || "OdontoConnect",
   url:
     process.env.NEXT_PUBLIC_PARTNER_URL ||
-    "https://odonto-connect.vercel.app",
+    "https://play.google.com/store/apps/details?id=com.appodontoconnect&pli=1",
   description:
     process.env.NEXT_PUBLIC_PARTNER_DESCRIPTION ||
     "conecta você com dentistas verificados, com avaliações reais de pacientes e agendamento online",
-  cta: process.env.NEXT_PUBLIC_PARTNER_CTA || "Encontrar dentistas avaliados",
+  cta: process.env.NEXT_PUBLIC_PARTNER_CTA || "Baixar na Google Play",
   ctaAction:
-    process.env.NEXT_PUBLIC_PARTNER_CTA_ACTION || "Acessar",
+    process.env.NEXT_PUBLIC_PARTNER_CTA_ACTION || "Baixar na Google Play",
 } as const;
 
 // Keep backwards compat export
@@ -30,6 +30,7 @@ export const UTM_PARAMS = {
 } as const;
 
 export function getPartnerURL(city?: string, procedure?: string): string {
+  const url = new URL(PARTNER.url);
   const params = new URLSearchParams({
     utm_source: UTM_PARAMS.source,
     utm_medium: UTM_PARAMS.medium,
@@ -37,7 +38,8 @@ export function getPartnerURL(city?: string, procedure?: string): string {
     ...(city && { utm_content: city }),
     ...(procedure && { utm_term: procedure }),
   });
-  return `${PARTNER.url}?${params.toString()}`;
+  params.forEach((value, key) => url.searchParams.set(key, value));
+  return url.toString();
 }
 
 // Backwards compat alias
