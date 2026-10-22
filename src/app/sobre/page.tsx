@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_NAME, PARTNER } from "@/lib/constants";
+import { SITE_NAME, PARTNER, getPartnerURL } from "@/lib/constants";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { getCityCount } from "@/lib/cities";
 import { getAllProcedures } from "@/lib/procedures";
@@ -253,12 +253,12 @@ export default function SobrePage() {
                 <ExternalLink className="w-4 h-4" />
               </a>
               <a
-                href={PARTNER.url}
+                href={getPartnerURL()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white/20 transition-all duration-300"
               >
-                Conheça o {PARTNER.name}
+                {PARTNER.cta}
                 <ExternalLink className="w-4 h-4" />
               </a>
               <Link

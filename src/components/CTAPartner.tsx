@@ -39,7 +39,7 @@ export function CTAPartner({
 
       <div className="relative">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          {PARTNER.cta} perto de você
+          Encontre dentistas avaliados perto de você
         </h2>
         <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-lg">
           O {PARTNER.name} {PARTNER.description}.
@@ -50,7 +50,7 @@ export function CTAPartner({
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-white text-blue-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl shadow-blue-900/20"
         >
-          {PARTNER.ctaAction} {PARTNER.name}
+          {PARTNER.ctaAction}
           <ExternalLink className="h-5 w-5" />
         </a>
       </div>
